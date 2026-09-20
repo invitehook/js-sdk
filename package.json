@@ -1,0 +1,15 @@
+{
+  "name": "invitehook-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "publish:npm": "pnpm -r publish",
+    "publish:jsr": "pnpm dlx jsr publish",
+    "publish:all": "pnpm run publish:npm && pnpm run publish:jsr",
+    "publish:check": "pnpm -r publish --dry-run --no-git-checks && pnpm dlx jsr publish --dry-run --allow-dirty"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}
